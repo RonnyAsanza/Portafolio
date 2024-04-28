@@ -27,6 +27,11 @@ import { PruebasDeCalidadComponent } from './components/shared/soluciones/prueba
 import { GestionTiComponent } from './components/shared/soluciones/gestion-ti/gestion-ti.component';
 import { SeguridadCiberneticaComponent } from './components/shared/soluciones/seguridad-cibernetica/seguridad-cibernetica.component';
 import { ConectividadInalambricaComponent } from './components/shared/soluciones/conectividad-inalambrica/conectividad-inalambrica.component';
+import { JoeCompanyComponent } from './components/pages/case-studies-details/joe-company/joe-company.component';
+import { RideShareAppComponent } from './components/pages/case-studies-details/ride-share-app/ride-share-app.component';
+import { RestaurantManagementComponent } from './components/pages/case-studies-details/restaurant-management/restaurant-management.component';
+import { ItSoftwareCompanyComponent } from './components/pages/case-studies-details/it-software-company/it-software-company.component';
+import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -43,6 +48,13 @@ const routes: Routes = [
 
     {path: 'case-studies', component: CaseStudiesComponent},
     {path: 'case-studies-details', component: CaseStudiesDetailsComponent},
+    {path: 'joe-company', component: JoeCompanyComponent},
+    {path: 'ride-share-app', component: RideShareAppComponent},
+    {path: 'restaurant-management', component: RestaurantManagementComponent},
+    {path: 'it-software-company', component: ItSoftwareCompanyComponent},
+    {path: 'parking-management', component: ParkingManagementComponent},
+    {path: 'temperature-app', component: ItSoftwareCompanyComponent},
+
     {path: 'blog', component: BlogComponent},
     {path: 'blog-details', component: BlogDetailsComponent},
     {path: 'team', component: TeamComponent},

@@ -40,6 +40,12 @@ import { DisenoComponent } from './components/shared/casos-de-extio/diseno/disen
 import { DesarrolloComponent } from './components/shared/casos-de-extio/desarrollo/desarrollo.component';
 import { SeguridadCiberneticaExitoComponent } from './components/shared/casos-de-extio/seguridad-cibernetica-exito/seguridad-cibernetica-exito.component';
 import { AllComponent } from './components/shared/casos-de-extio/all/all.component';
+import { JoeCompanyComponent } from './components/pages/case-studies-details/joe-company/joe-company.component';
+import { RideShareAppComponent } from './components/pages/case-studies-details/ride-share-app/ride-share-app.component';
+import { RestaurantManagementComponent } from './components/pages/case-studies-details/restaurant-management/restaurant-management.component';
+import { ItSoftwareCompanyComponent } from './components/pages/case-studies-details/it-software-company/it-software-company.component';
+import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
+import { TemperatureAppComponent } from './components/pages/case-studies-details/temperature-app/temperature-app.component';
 
 @NgModule({
   declarations: [
@@ -67,17 +73,27 @@ import { AllComponent } from './components/shared/casos-de-extio/all/all.compone
     TermsConditionsComponent,
     PrivacyPolicyComponent,
     ContactComponent,
+
     RedesHorinzontalComponent,
+
     DesarrolloMobileComponent,
     DesarrolloWebComponent,
     PruebasDeCalidadComponent,
     GestionTiComponent,
     SeguridadCiberneticaComponent,
     ConectividadInalambricaComponent,
+
     DisenoComponent,
     DesarrolloComponent,
     SeguridadCiberneticaExitoComponent,
-    AllComponent
+    AllComponent,
+
+    JoeCompanyComponent,
+    RideShareAppComponent,
+    RestaurantManagementComponent,
+    ItSoftwareCompanyComponent,
+    ParkingManagementComponent,
+    TemperatureAppComponent
   ],
   imports: [
     BrowserModule,
