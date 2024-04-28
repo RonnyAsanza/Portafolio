@@ -27,8 +27,14 @@ const routes: Routes = [
     {path: 'home-two', component: HomeTwoComponent},
     {path: 'home-three', component: HomeThreeComponent},
     {path: 'about', component: AboutComponent},
-    {path: 'solutions', component: SolutionsComponent},
-    {path: 'solutions-details', component: SolutionsDetailsComponent},
+
+    {path: 'desarrollo-mobile', component: SolutionsComponent},
+    {path: 'desarrollo-web', component: SolutionsDetailsComponent},
+    {path: 'pruebas-de-calidad', component: SolutionsDetailsComponent},
+    {path: 'gestion-ti', component: SolutionsDetailsComponent},
+    {path: 'seguridad-cibernetica', component: SolutionsDetailsComponent},
+    {path: 'conectividad-inalambrica', component: SolutionsDetailsComponent},
+
     {path: 'case-studies', component: CaseStudiesComponent},
     {path: 'case-studies-details', component: CaseStudiesDetailsComponent},
     {path: 'blog', component: BlogComponent},
