@@ -75,23 +75,23 @@ export class HomeOneComponent implements OnInit {
     // Accordion
     accordionItems = [
         {
-            title: 'Great Understanding',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
+            title: 'Gran comprensión',
+            content: `Nos anticipamos a las necesidades de su negocio con una comprensión excepcional del mercado y sus desafíos únicos. Su visión se convierte en nuestra misión.`,
             open: false
         },
         {
-            title: 'Update Technology',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
+            title: 'Actualizar tecnología',
+            content: `Estamos en la cúspide de la innovación tecnológica, adoptando rápidamente los avances para mantener a su empresa siempre adelante en la carrera digital.`,
             open: false
         },
         {
-            title: 'Experienced Team',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
+            title: 'Equipo experimentado',
+            content: `Nuestro equipo aporta años de experiencia y un historial probado de éxito para asegurar la excelencia en cada proyecto que entregamos.`,
             open: false
         },
         {
-            title: 'Best Quality Service',
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt sit amet consectetur adipiscing.`,
+            title: 'Servicio de mejor calidad',
+            content: `La calidad no es negociable. Ofrecemos servicios de primera línea que definen estándares, superan expectativas y crean experiencias memorables.`,
             open: false
         }
     ];

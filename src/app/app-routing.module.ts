@@ -21,6 +21,12 @@ import { FaqComponent } from './components/pages/faq/faq.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { DesarrolloMobileComponent } from './components/shared/soluciones/desarrollo-mobile/desarrollo-mobile.component';
+import { DesarrolloWebComponent } from './components/shared/soluciones/desarrollo-web/desarrollo-web.component';
+import { PruebasDeCalidadComponent } from './components/shared/soluciones/pruebas-de-calidad/pruebas-de-calidad.component';
+import { GestionTiComponent } from './components/shared/soluciones/gestion-ti/gestion-ti.component';
+import { SeguridadCiberneticaComponent } from './components/shared/soluciones/seguridad-cibernetica/seguridad-cibernetica.component';
+import { ConectividadInalambricaComponent } from './components/shared/soluciones/conectividad-inalambrica/conectividad-inalambrica.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -28,12 +34,12 @@ const routes: Routes = [
     {path: 'home-three', component: HomeThreeComponent},
     {path: 'about', component: AboutComponent},
 
-    {path: 'desarrollo-mobile', component: SolutionsComponent},
-    {path: 'desarrollo-web', component: SolutionsDetailsComponent},
-    {path: 'pruebas-de-calidad', component: SolutionsDetailsComponent},
-    {path: 'gestion-ti', component: SolutionsDetailsComponent},
-    {path: 'seguridad-cibernetica', component: SolutionsDetailsComponent},
-    {path: 'conectividad-inalambrica', component: SolutionsDetailsComponent},
+    {path: 'desarrollo-mobile', component: DesarrolloMobileComponent},
+    {path: 'desarrollo-web', component: DesarrolloWebComponent},
+    {path: 'pruebas-de-calidad', component: PruebasDeCalidadComponent},
+    {path: 'gestion-ti', component: GestionTiComponent},
+    {path: 'seguridad-cibernetica', component: SeguridadCiberneticaComponent},
+    {path: 'conectividad-inalambrica', component: ConectividadInalambricaComponent},
 
     {path: 'case-studies', component: CaseStudiesComponent},
     {path: 'case-studies-details', component: CaseStudiesDetailsComponent},

@@ -29,6 +29,17 @@ import { FaqComponent } from './components/pages/faq/faq.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { RedesHorinzontalComponent } from './components/shared/redes/redes-horinzontal/redes-horinzontal.component';
+import { DesarrolloMobileComponent } from './components/shared/soluciones/desarrollo-mobile/desarrollo-mobile.component';
+import { DesarrolloWebComponent } from './components/shared/soluciones/desarrollo-web/desarrollo-web.component';
+import { PruebasDeCalidadComponent } from './components/shared/soluciones/pruebas-de-calidad/pruebas-de-calidad.component';
+import { GestionTiComponent } from './components/shared/soluciones/gestion-ti/gestion-ti.component';
+import { SeguridadCiberneticaComponent } from './components/shared/soluciones/seguridad-cibernetica/seguridad-cibernetica.component';
+import { ConectividadInalambricaComponent } from './components/shared/soluciones/conectividad-inalambrica/conectividad-inalambrica.component';
+import { DisenoComponent } from './components/shared/casos-de-extio/diseno/diseno.component';
+import { DesarrolloComponent } from './components/shared/casos-de-extio/desarrollo/desarrollo.component';
+import { SeguridadCiberneticaExitoComponent } from './components/shared/casos-de-extio/seguridad-cibernetica-exito/seguridad-cibernetica-exito.component';
+import { AllComponent } from './components/shared/casos-de-extio/all/all.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +66,18 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     FaqComponent,
     TermsConditionsComponent,
     PrivacyPolicyComponent,
-    ContactComponent
+    ContactComponent,
+    RedesHorinzontalComponent,
+    DesarrolloMobileComponent,
+    DesarrolloWebComponent,
+    PruebasDeCalidadComponent,
+    GestionTiComponent,
+    SeguridadCiberneticaComponent,
+    ConectividadInalambricaComponent,
+    DisenoComponent,
+    DesarrolloComponent,
+    SeguridadCiberneticaExitoComponent,
+    AllComponent
   ],
   imports: [
     BrowserModule,
