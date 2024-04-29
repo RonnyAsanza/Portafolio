@@ -12,6 +12,7 @@ export class HomeOneComponent implements OnInit {
 
     ngOnInit(): void {}
 
+    imageName: string = 'contact-img.png';
     teamSlides: OwlOptions = {
 		loop: true,
         margin: 20,

@@ -46,6 +46,8 @@ import { RestaurantManagementComponent } from './components/pages/case-studies-d
 import { ItSoftwareCompanyComponent } from './components/pages/case-studies-details/it-software-company/it-software-company.component';
 import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
 import { TemperatureAppComponent } from './components/pages/case-studies-details/temperature-app/temperature-app.component';
+import { TestimoniosComponent } from './components/shared/testimonios/testimonios.component';
+import { ContactoComponent } from './components/shared/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +95,12 @@ import { TemperatureAppComponent } from './components/pages/case-studies-details
     RestaurantManagementComponent,
     ItSoftwareCompanyComponent,
     ParkingManagementComponent,
-    TemperatureAppComponent
+    TemperatureAppComponent,
+  
+    TestimoniosComponent,
+
+    ContactoComponent
+
   ],
   imports: [
     BrowserModule,
