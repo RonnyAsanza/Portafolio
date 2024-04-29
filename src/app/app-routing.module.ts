@@ -34,10 +34,9 @@ import { ItSoftwareCompanyComponent } from './components/pages/case-studies-deta
 import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
 
 const routes: Routes = [
-    {path: '', component: HomeOneComponent},
-    {path: 'home-two', component: HomeTwoComponent},
-    {path: 'home-three', component: HomeThreeComponent},
-    {path: 'about', component: AboutComponent},
+    {path: '', component: HomeOneComponent}, //inicio
+
+    {path: 'nosotros', component: AboutComponent},
 
     {path: 'desarrollo-mobile', component: DesarrolloMobileComponent},
     {path: 'desarrollo-web', component: DesarrolloWebComponent},
@@ -46,8 +45,6 @@ const routes: Routes = [
     {path: 'seguridad-cibernetica', component: SeguridadCiberneticaComponent},
     {path: 'conectividad-inalambrica', component: ConectividadInalambricaComponent},
 
-    {path: 'case-studies', component: CaseStudiesComponent},
-    {path: 'case-studies-details', component: CaseStudiesDetailsComponent},
     {path: 'joe-company', component: JoeCompanyComponent},
     {path: 'ride-share-app', component: RideShareAppComponent},
     {path: 'restaurant-management', component: RestaurantManagementComponent},
@@ -55,19 +52,24 @@ const routes: Routes = [
     {path: 'parking-management', component: ParkingManagementComponent},
     {path: 'temperature-app', component: ItSoftwareCompanyComponent},
 
-    {path: 'blog', component: BlogComponent},
-    {path: 'blog-details', component: BlogDetailsComponent},
-    {path: 'team', component: TeamComponent},
-    {path: 'pricing', component: PricingComponent},
-    {path: 'gallery', component: GalleryComponent},
-    {path: 'testimonials', component: TestimonialsComponent},
-    {path: 'sign-up', component: SignUpComponent},
-    {path: 'sign-in', component: SignInComponent},
-    {path: 'error', component: ErrorComponent},
-    {path: 'faq', component: FaqComponent},
-    {path: 'terms-condition', component: TermsConditionsComponent},
-    {path: 'privacy-policy', component: PrivacyPolicyComponent},
-    {path: 'contact', component: ContactComponent},
+    {path: 'terminos-condiciones', component: TermsConditionsComponent},
+    {path: 'contacto', component: ContactComponent},
+
+    // {path: 'case-studies', component: CaseStudiesComponent},
+    // {path: 'case-studies-details', component: CaseStudiesDetailsComponent},
+    // {path: 'blog', component: BlogComponent},
+    // {path: 'blog-details', component: BlogDetailsComponent},
+    // {path: 'team', component: TeamComponent},
+    // {path: 'pricing', component: PricingComponent},
+    // {path: 'gallery', component: GalleryComponent},
+    // {path: 'testimonials', component: TestimonialsComponent},
+    // {path: 'sign-up', component: SignUpComponent},
+    // {path: 'sign-in', component: SignInComponent},
+    // {path: 'error', component: ErrorComponent},
+    // {path: 'faq', component: FaqComponent},
+    // {path: 'privacy-policy', component: PrivacyPolicyComponent},
+    // {path: 'home-two', component: HomeTwoComponent},
+    // {path: 'home-three', component: HomeThreeComponent},
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
