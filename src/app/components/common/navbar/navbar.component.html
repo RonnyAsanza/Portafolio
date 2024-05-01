@@ -19,7 +19,7 @@
             <div class="col-lg-2 col-sm-6 text-end pl-0">
                 <div class="header-content-right">
                     <ul class="header-social">
-                        <li><a href="https://www.instagram.com/asanzasolutions" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/asanzawebsolutions" target="_blank"><i class="bx bxl-instagram"></i></a></li>
                         <li><a href="https://www.facebook.com/people/Asanza-Web-Solutions/61550212934317/" target="_blank"><i class="bx bxl-facebook"></i></a></li>
                         <li><a href="mailto:asanzawebsolutions&#64;gmail.com" target="_blank"> <i class="bx bxs-envelope"></i></a></li>
                         <li><a href="https://wa.me/+34658230355"  target="_blank"> <i class='bx bxl-whatsapp'></i></a></li>
@@ -50,7 +50,7 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav text-left">
                         <li class="nav-item">
-                            <a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Inicio</a>
+                            <a routerLink="/" (click)="toggleClass()" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Inicio</a>
 <!-- 
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home One</a></li>
@@ -62,32 +62,32 @@
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/nosotros" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Nosotros</a>
+                            <a routerLink="/nosotros" (click)="toggleClass()" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Nosotros</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Soluciones</a>
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdownSoluciones(false)">Soluciones</a>
 
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/desarrollo-mobile" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Desarrollo Mobile</a></li>
-                                <li class="nav-item"><a routerLink="/desarrollo-web" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Desarrollo Web</a></li>
-                                <li class="nav-item"><a routerLink="/pruebas-de-calidad" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Pruebas De Calidad</a></li>
-                                <li class="nav-item"><a routerLink="/gestion-ti" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gestión de TI</a></li>
-                                <li class="nav-item"><a routerLink="/seguridad-cibernetica" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Seguridad cibernética</a></li>
-                                <li class="nav-item"><a routerLink="/conectividad-inalambrica" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Conectividad inalámbrica</a></li>
+                            <ul class="dropdown-menu" *ngIf="isDropdownOpenSoluciones">
+                                <li class="nav-item"><a routerLink="/desarrollo-mobile" (click)="toggleDropdownSoluciones(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Desarrollo Mobile</a></li>
+                                <li class="nav-item"><a routerLink="/desarrollo-web" (click)="toggleDropdownSoluciones(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Desarrollo Web</a></li>
+                                <li class="nav-item"><a routerLink="/pruebas-de-calidad" (click)="toggleDropdownSoluciones(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Pruebas De Calidad</a></li>
+                                <li class="nav-item"><a routerLink="/gestion-ti" (click)="toggleDropdownSoluciones(true)"class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gestión de TI</a></li>
+                                <li class="nav-item"><a routerLink="/seguridad-cibernetica" (click)="toggleDropdownSoluciones(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Seguridad cibernética</a></li>
+                                <li class="nav-item"><a routerLink="/conectividad-inalambrica" (click)="toggleDropdownSoluciones(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Conectividad inalámbrica</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Casos De Éxito</a>
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdownExito(false)">Casos De Éxito</a>
                             
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/joe-company" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Joe Company</a></li>
-                                <li class="nav-item"><a routerLink="/ride-share-app" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Ride Share APP</a></li>
-                                <li class="nav-item"><a routerLink="/restaurant-management" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Restaurant Management</a></li>
-                                <li class="nav-item"><a routerLink="/it-software-company" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">IT Software Company</a></li>
-                                <li class="nav-item"><a routerLink="/parking-management" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Parking Management</a></li>
-                                <li class="nav-item"><a routerLink="/temperature-app" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Temperature APP</a></li>
+                            <ul class="dropdown-menu" *ngIf="isDropdownOpenExito">
+                                <li class="nav-item"><a routerLink="/joe-company" (click)="toggleDropdownExito(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Joe Company</a></li>
+                                <li class="nav-item"><a routerLink="/ride-share-app" (click)="toggleDropdownExito(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Ride Share APP</a></li>
+                                <li class="nav-item"><a routerLink="/restaurant-management" (click)="toggleDropdownExito(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Restaurant Management</a></li>
+                                <li class="nav-item"><a routerLink="/it-software-company" (click)="toggleDropdownExito(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">IT Software Company</a></li>
+                                <li class="nav-item"><a routerLink="/parking-management" (click)="toggleDropdownExito(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Parking Management</a></li>
+                                <li class="nav-item"><a routerLink="/temperature-app" (click)="toggleDropdownExito(true)" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Temperature APP</a></li>
                             </ul>
                         </li>
 
@@ -127,13 +127,13 @@
                             </ul>
                         </li> -->
 
-                        <li class="nav-item"><a routerLink="/contacto" class="nav-link">Contacto </a></li>
+                        <li class="nav-item"><a (click)="toggleClass()" routerLink="/contacto" class="nav-link">Contacto </a></li>
                     </ul>
                 </div>
                 <div class="nav-right">
                     <form>
                         <div class="input-group">
-                            <input type="text" class="form-control search" placeholder="Search..." />
+                            <input type="text" class="form-control search" placeholder="Buscar..." />
                         </div>
 
                         <button type="submit">

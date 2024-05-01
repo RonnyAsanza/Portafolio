@@ -48,6 +48,9 @@ import { ParkingManagementComponent } from './components/pages/case-studies-deta
 import { TemperatureAppComponent } from './components/pages/case-studies-details/temperature-app/temperature-app.component';
 import { TestimoniosComponent } from './components/shared/testimonios/testimonios.component';
 import { ContactoComponent } from './components/shared/contacto/contacto.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { LoaderComponent } from './components/shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +102,9 @@ import { ContactoComponent } from './components/shared/contacto/contacto.compone
   
     TestimoniosComponent,
 
-    ContactoComponent
+    ContactoComponent,
+
+    LoaderComponent
 
   ],
   imports: [
@@ -107,7 +112,9 @@ import { ContactoComponent } from './components/shared/contacto/contacto.compone
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
-    NgxScrollTopModule
+    NgxScrollTopModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

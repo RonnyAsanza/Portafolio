@@ -34,26 +34,29 @@ import { ItSoftwareCompanyComponent } from './components/pages/case-studies-deta
 import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
 
 const routes: Routes = [
-    {path: '', component: HomeOneComponent}, //inicio
+    { path: '', redirectTo: '/inicio', pathMatch: 'full' },
 
-    {path: 'nosotros', component: AboutComponent},
+    { path: 'inicio', component: HomeOneComponent },
+    { path: 'nosotros', component: AboutComponent },
 
-    {path: 'desarrollo-mobile', component: DesarrolloMobileComponent},
-    {path: 'desarrollo-web', component: DesarrolloWebComponent},
-    {path: 'pruebas-de-calidad', component: PruebasDeCalidadComponent},
-    {path: 'gestion-ti', component: GestionTiComponent},
-    {path: 'seguridad-cibernetica', component: SeguridadCiberneticaComponent},
-    {path: 'conectividad-inalambrica', component: ConectividadInalambricaComponent},
+    { path: 'desarrollo-mobile', component: DesarrolloMobileComponent },
+    { path: 'desarrollo-web', component: DesarrolloWebComponent },
+    { path: 'pruebas-de-calidad', component: PruebasDeCalidadComponent },
+    { path: 'gestion-ti', component: GestionTiComponent },
+    { path: 'seguridad-cibernetica', component: SeguridadCiberneticaComponent },
+    { path: 'conectividad-inalambrica', component: ConectividadInalambricaComponent },
 
-    {path: 'joe-company', component: JoeCompanyComponent},
-    {path: 'ride-share-app', component: RideShareAppComponent},
-    {path: 'restaurant-management', component: RestaurantManagementComponent},
-    {path: 'it-software-company', component: ItSoftwareCompanyComponent},
-    {path: 'parking-management', component: ParkingManagementComponent},
-    {path: 'temperature-app', component: ItSoftwareCompanyComponent},
+    { path: 'joe-company', component: JoeCompanyComponent },
+    { path: 'ride-share-app', component: RideShareAppComponent },
+    { path: 'restaurant-management', component: RestaurantManagementComponent },
+    { path: 'it-software-company', component: ItSoftwareCompanyComponent },
+    { path: 'parking-management', component: ParkingManagementComponent },
+    { path: 'temperature-app', component: ItSoftwareCompanyComponent },
 
-    {path: 'terminos-condiciones', component: TermsConditionsComponent},
-    {path: 'contacto', component: ContactComponent},
+    { path: 'terminos-condiciones', component: TermsConditionsComponent },
+    { path: 'contacto', component: ContactComponent },
+
+    { path: 'error', component: ErrorComponent },
 
     // {path: 'case-studies', component: CaseStudiesComponent},
     // {path: 'case-studies-details', component: CaseStudiesDetailsComponent},
@@ -65,14 +68,13 @@ const routes: Routes = [
     // {path: 'testimonials', component: TestimonialsComponent},
     // {path: 'sign-up', component: SignUpComponent},
     // {path: 'sign-in', component: SignInComponent},
-    // {path: 'error', component: ErrorComponent},
-    // {path: 'faq', component: FaqComponent},
+    // { path: 'faq', component: FaqComponent },
     // {path: 'privacy-policy', component: PrivacyPolicyComponent},
     // {path: 'home-two', component: HomeTwoComponent},
     // {path: 'home-three', component: HomeThreeComponent},
     // Here add new pages component
 
-    {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
+    { path: '**', component: ErrorComponent}
 
 ];
 

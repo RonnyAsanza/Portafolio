@@ -23,24 +23,41 @@ export class NavbarComponent implements OnInit {
         this.classApplied = !this.classApplied;
     }
 
+    isDropdownOpenSoluciones: boolean = false;
+    toggleDropdownSoluciones(isClose: boolean): void {
+        this.isDropdownOpenSoluciones = !this.isDropdownOpenSoluciones;
+        if (isClose) {
+            this.toggleClass();
+        }
+
+    }
+
+    isDropdownOpenExito: boolean = false;
+    toggleDropdownExito(isClose: boolean): void {
+        this.isDropdownOpenExito = !this.isDropdownOpenExito;
+        if (isClose) {
+            this.toggleClass();
+        }
+    }
+
     constructor(
         private router: Router,
         location: Location
     ) {
         this.router.events
-        .subscribe((event) => {
-            if ( event instanceof NavigationEnd ) {
-                this.location = this.router.url;
-                if (this.location == '/home-three'){
-                    this.navbarClass = 'navbar-area three';
-                } else {
-                    this.navbarClass = 'navbar-area';
+            .subscribe((event) => {
+                if (event instanceof NavigationEnd) {
+                    this.location = this.router.url;
+                    if (this.location == '/home-three') {
+                        this.navbarClass = 'navbar-area three';
+                    } else {
+                        this.navbarClass = 'navbar-area';
+                    }
                 }
-            }
-        });
+            });
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void { }
 
     // Navbar Sticky
     isSticky: boolean = false;
