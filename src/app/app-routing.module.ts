@@ -33,6 +33,7 @@ import { RestaurantManagementComponent } from './components/pages/case-studies-d
 import { ItSoftwareCompanyComponent } from './components/pages/case-studies-details/it-software-company/it-software-company.component';
 import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
 import { LoginComponent } from './components/landings/login/login.component';
+import { EmailMessageTableAdminComponent } from './components/landings/email-message-table-admin/email-message-table-admin.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -75,9 +76,8 @@ const routes: Routes = [
     // {path: 'privacy-policy', component: PrivacyPolicyComponent},
     // {path: 'home-two', component: HomeTwoComponent},
     // {path: 'home-three', component: HomeThreeComponent},
-    // Here add new pages component
 
-    { path: '**', component: ErrorComponent}
+    { path: '**', component: EmailMessageTableAdminComponent}
 
 ];
 

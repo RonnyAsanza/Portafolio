@@ -10,6 +10,7 @@ import { StorageService } from '../../../services/storage/storage.service';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  isLoged: boolean = false;
 
   email: string = '';
   password: string = '';
@@ -27,6 +28,7 @@ export class LoginComponent {
 
   constructor(private loginService: LoginService, private loaderService: LoaderService, private storageService: StorageService) {
     this.getInLocalStoreRecovery();
+    this.isLoged = this.storageService.get('loged');
   }
 
   iniciarSesion() {
@@ -49,6 +51,10 @@ export class LoginComponent {
     }).subscribe({
       next: (response: ServerResponse) => {
         if (response.succeeded) {
+          this.storageService.save('loged', true);
+          this.storageService.save('userloged', response.data);
+          //redirect si es admin un sitio sino otro
+          //setear true vistas
         } else {
           this.showErrorLogin();
         }

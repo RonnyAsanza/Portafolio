@@ -53,6 +53,7 @@ import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { LoginComponent } from './components/landings/login/login.component';
 import { ShapeComponent } from './components/shared/shape/shape.component';
+import { EmailMessageTableAdminComponent } from './components/landings/email-message-table-admin/email-message-table-admin.component';
 
 @NgModule({
   declarations: [
@@ -102,6 +103,7 @@ import { ShapeComponent } from './components/shared/shape/shape.component';
     LoaderComponent,
     LoginComponent,
     ShapeComponent,
+    EmailMessageTableAdminComponent
 
   ],
   imports: [

@@ -1,0 +1,56 @@
+<div>
+    <div class="page-title-area">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>Email Message</h2>
+                <ul>
+                    <li><a routerLink="/">Inicio </a></li>
+                    <li class="active">Email Message</li>
+                </ul>
+            </div>
+        </div>
+
+        <app-shape></app-shape>
+    </div>
+</div>
+
+<section class="ptb-100">
+    <div class="container">
+        <h2>Formulario de contacto recibidos</h2>
+        <div class="row mb-4">
+            <div class="col">
+                <button class="btn btn-success">Crear nuevo</button>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Asunto</th>
+                    <th scope="col">Texto</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Acciones</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of datos; let i = index">
+                    <td>{{ dato.id }}</td>
+                    <td>{{ dato.name }}</td>
+                    <td>{{ dato.phone }}</td>
+                    <td>{{ dato.email }}</td>
+                    <td>{{ dato.subject }}</td>
+                    <td>{{ dato.message }}</td>
+                    <td>{{ dato.data }}</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm w-100 mt-2">Editar</button>
+                        <button class="btn btn-danger btn-sm w-100 mt-2">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
