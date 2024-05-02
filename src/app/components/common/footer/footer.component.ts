@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialDataService } from '../../../shared/social/social-data.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   currentYear: number = new Date().getFullYear();
 
-  constructor() { }
+  constructor(public socialDataService: SocialDataService) {}
 
   ngOnInit(): void {
   }

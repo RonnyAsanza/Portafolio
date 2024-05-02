@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { EmailService } from '../../../services/email.service';
+import { EmailService } from '../../../services/email/email.service';
 import { ServerResponse } from '../../../models/server-response';
+import { SocialDataService } from '../../../shared/social/social-data.service';
 
 @Component({
   selector: 'app-contact',
@@ -30,7 +31,40 @@ export class ContactComponent {
   subjectErrorText: string = '';
   messageErrorText: string = '';
 
-  constructor(private emailService: EmailService) {
+  constructor(private emailService: EmailService, public socialDataService: SocialDataService) {
+  }
+
+  onClickSubmit() {
+    const formIsValid = this.validateForm();
+    if (!formIsValid) {
+      return;
+    }
+
+    this.isLoading = true;
+
+    this.emailService.sendEmail({
+      names: this.name,
+      email: this.email,
+      phone: this.phoneNumber,
+      subject: this.subject,
+      message: this.message
+    }).subscribe({
+      next: (response: ServerResponse) => {
+        if (response.succeeded) {
+          this.showConfirmSendEmail();
+          this.resetForm();
+        } else {
+          this.showErrorSendEmail();
+        }
+      },
+      error: (error) => {
+        this.showErrorSendEmail();
+        this.isLoading = false;
+      },
+      complete: () => {
+        this.isLoading = false;
+      }
+    });
   }
 
   validateForm(): boolean {
@@ -47,7 +81,7 @@ export class ContactComponent {
       this.nameIsValid = false;
       formIsValid = false;
     }
-    if (!this.email.includes('@') || !/\.[a-zA-Z]{2,}$/.test(this.email) || this.email.length < 5 || this.email.length > 30) {
+    if (!this.email.includes('@') || this.email.length < 5 || this.email.length > 50) {
       this.emailErrorText = 'Debes introducir un email correcto.';
       this.emailIsValid = false;
       formIsValid = false;
@@ -69,37 +103,6 @@ export class ContactComponent {
     }
 
     return formIsValid;
-  }
-  onClickSubmit() {
-    const formIsValid = this.validateForm();
-    if (!formIsValid) {
-      return;
-    }
-
-    this.isLoading = true;
-
-    this.emailService.sendEmail({
-      name: this.name,
-      email: this.email,
-      phone: this.phoneNumber,
-      subject: this.subject,
-      message: this.message
-    }).subscribe({
-      next: (response: ServerResponse) => {
-        if (response.succeeded) {
-          this.showConfirmSendEmail();
-          this.resetForm();
-        } else {
-          this.showErrorSendEmail();
-        }
-      },
-      error: (error) => {
-        this.showErrorSendEmail();
-      },
-      complete: () => {
-        this.isLoading = false;
-      }
-    });
   }
 
   showErrorSendEmail() {

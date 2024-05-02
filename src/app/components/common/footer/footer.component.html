@@ -34,27 +34,29 @@
                     <ul class="social">
                         <li>
                             <a
-                                href="https://www.facebook.com/people/Asanza-Web-Solutions/61550212934317/"
+                                [href]="socialDataService.urlFacebook"
                                 target="_blank"
                                 ><i class="bx bxl-facebook"></i
                             ></a>
                         </li>
                         <li>
                             <a
-                                href="https://www.instagram.com/asanzawebsolutions"
+                                [href]="socialDataService.urlInstagram"
                                 target="_blank"
                                 ><i class="bx bxl-instagram"></i
                             ></a>
                         </li>
                         <li>
                             <a
-                                href="mailto:asanzawebsolutions&#64;gmail.com"
+                                [href]="socialDataService.urlEmail"
                                 target="_blank"
                                 ><i class="bx bxs-envelope"></i
                             ></a>
                         </li>
                         <li>
-                            <a href="https://wa.me/+34658230355" target="_blank"
+                            <a
+                                [href]="socialDataService.urlWhatsapp"
+                                target="_blank"
                                 ><i class="bx bxl-whatsapp"></i
                             ></a>
                         </li>
@@ -116,21 +118,21 @@
 
                     <ul class="footer-list foot-social">
                         <li>
-                            <a href="tel:+1123456789"
-                                ><i class="bx bx-mobile-alt"></i> +34 658 230
-                                355</a
+                            <a [href]="socialDataService.urlPhone"
+                                ><i class="bx bx-mobile-alt"></i
+                                >{{ socialDataService.phone }}</a
                             >
                         </li>
                         <li>
-                            <a href="mailto:hello&#64;aiva.com"
+                            <a [href]="socialDataService.urlEmail"
                                 ><i class="bx bxs-envelope"></i>
-                                asanzawebsolutions&#64;gmail.com</a
+                                {{ socialDataService.email }}</a
                             >
                         </li>
                         <li>
-                            <a href="mailto:support&#64;aiva.com"
+                            <a [href]="socialDataService.urlEmailPrivate"
                                 ><i class="bx bxs-envelope"></i>
-                                ronnyasanza&#64;gmail.com</a
+                                {{socialDataService.emailPrivate}}</a
                             >
                         </li>
                         <li><i class="bx bxs-map"></i> 08700, Igualada, ESP</li>
@@ -154,7 +156,9 @@
                 <div class="col-lg-6">
                     <p>
                         © {{ currentYear }} AWS. Todos los derechos reservados.
-                        <a href="https://wa.me/+34658230355" target="_blank"
+                        <a
+                            [href]="socialDataService.urlWhatsapp"
+                            target="_blank"
                             >Whatsapp.</a
                         >
                     </p>

@@ -9,13 +9,7 @@
         </div>
     </div>
 
-    <div class="page-shape">
-        <div class="shape1"><img src="assets/images/shape/1.png" alt="shape" /></div>
-        <div class="shape3"><img src="assets/images/shape/3.png" alt="shape" /></div>
-        <div class="shape4"><img src="assets/images/shape/4.png" alt="shape" /></div>
-        <div class="shape5"><img src="assets/images/shape/5.png" alt="shape" /></div>
-        <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
-    </div>
+    <app-shape></app-shape>
 </div>
 
 <section class="home-company-area">
@@ -26,15 +20,39 @@
                     <div class="company-tittle justify-content-center">
                         <span>Nuesta compañía</span>
                         <h2>Innovador servicio de ayuda en todo el mundo</h2>
-                        <p>En <strong>Asanza Web Solutions</strong>, nos dedicamos apasionadamente a ofrecer soluciones innovadoras en el ámbito del desarrollo de software a medida, creación y gestión de páginas web utilizando WordPress, y estrategias para fortalecer la presencia online de nuestros clientes. Con una trayectoria de 10 años en la industria, hemos establecido un sólido historial de éxito, ayudando a las empresas a navegar por el dinámico mundo digital y a maximizar su impacto en el mercado virtual.</p>
-                        <p>Nuestro equipo se compone de profesionales altamente cualificados y experimentados, que no solo poseen un profundo conocimiento técnico, sino también una visión estratégica crítica para el desarrollo de soluciones digitales eficaces. Nos enorgullecemos de nuestra capacidad para entender las necesidades específicas de cada cliente y ofrecer resultados personalizados que no solo satisfacen, sino que superan las expectativas</p>
+                        <p>
+                            En <strong>Asanza Web Solutions</strong>, nos
+                            dedicamos apasionadamente a ofrecer soluciones
+                            innovadoras en el ámbito del desarrollo de software
+                            a medida, creación y gestión de páginas web
+                            utilizando WordPress, y estrategias para fortalecer
+                            la presencia online de nuestros clientes. Con una
+                            trayectoria de 10 años en la industria, hemos
+                            establecido un sólido historial de éxito, ayudando a
+                            las empresas a navegar por el dinámico mundo digital
+                            y a maximizar su impacto en el mercado virtual.
+                        </p>
+                        <p>
+                            Nuestro equipo se compone de profesionales altamente
+                            cualificados y experimentados, que no solo poseen un
+                            profundo conocimiento técnico, sino también una
+                            visión estratégica crítica para el desarrollo de
+                            soluciones digitales eficaces. Nos enorgullecemos de
+                            nuestra capacidad para entender las necesidades
+                            específicas de cada cliente y ofrecer resultados
+                            personalizados que no solo satisfacen, sino que
+                            superan las expectativas
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-12">
                 <div class="company-img">
-                    <img src="assets/images/company/company-img.jpg" alt="company" />
+                    <img
+                        src="assets/images/company/company-img.jpg"
+                        alt="company"
+                    />
                 </div>
             </div>
         </div>
@@ -49,8 +67,12 @@
                     <img src="assets/images/choose-img1.jpg" alt="choose" />
 
                     <div class="technology-video">
-                        <button type="button" class="video-btn p-0 border-0" (click)="openPopup()">
-                            <i class='bx bx-play' ></i>
+                        <button
+                            type="button"
+                            class="video-btn p-0 border-0"
+                            (click)="openPopup()"
+                        >
+                            <i class="bx bx-play"></i>
                         </button>
                     </div>
                 </div>
@@ -59,8 +81,26 @@
             <div class="col-lg-6">
                 <div class="technology-content">
                     <h2>Tecnología actualizada</h2>
-                    <p>Estamos comprometidos con la vanguardia tecnológica, asegurándonos de que todas nuestras soluciones y servicios estén a la altura de las últimas innovaciones en el sector de TI. Mantenemos una vigilancia constante sobre las tendencias emergentes y las actualizaciones de software para integrarlas de manera efectiva en nuestros proyectos. Esto nos permite ofrecer a nuestros clientes herramientas y aplicaciones que no solo son modernas y eficientes, sino también seguras y escalables, adaptándose perfectamente a las necesidades cambiantes del mercado.</p>
-                    <p>Creemos firmemente en el poder transformador de la tecnología actualizada. Por eso, invertimos significativamente en la formación continua de nuestro equipo y en la renovación de nuestras herramientas y metodologías de trabajo.</p>
+                    <p>
+                        Estamos comprometidos con la vanguardia tecnológica,
+                        asegurándonos de que todas nuestras soluciones y
+                        servicios estén a la altura de las últimas innovaciones
+                        en el sector de TI. Mantenemos una vigilancia constante
+                        sobre las tendencias emergentes y las actualizaciones de
+                        software para integrarlas de manera efectiva en nuestros
+                        proyectos. Esto nos permite ofrecer a nuestros clientes
+                        herramientas y aplicaciones que no solo son modernas y
+                        eficientes, sino también seguras y escalables,
+                        adaptándose perfectamente a las necesidades cambiantes
+                        del mercado.
+                    </p>
+                    <p>
+                        Creemos firmemente en el poder transformador de la
+                        tecnología actualizada. Por eso, invertimos
+                        significativamente en la formación continua de nuestro
+                        equipo y en la renovación de nuestras herramientas y
+                        metodologías de trabajo.
+                    </p>
                     <a routerLink="/contacto" class="box-btn">Contáctanos</a>
                 </div>
             </div>
@@ -71,9 +111,15 @@
 <!-- Video Popup -->
 <div class="video-popup" *ngIf="isOpen">
     <div class="popup-inner">
-        <iframe src="https://www.youtube.com/embed/XNQk1qt__Vw" title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+            src="https://www.youtube.com/embed/XNQk1qt__Vw"
+            title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
         <button (click)="closePopup()" type="button" class="close-btn">
-            <i class='bx bx-x'></i>
+            <i class="bx bx-x"></i>
         </button>
     </div>
 </div>
@@ -86,17 +132,48 @@
                     <div class="feature-tittle">
                         <span>Servicios</span>
                         <h2>Nuestros Servicios</h2>
-                        <p>Ofrecemos un espacio que no solo sirve como un lugar de trabajo, sino como un centro de aprendizaje y desarrollo profesional. A través de nuestro Instituto de Aprendizaje de TI y nuestros servicios de marketing digital, aseguramos que nuestros clientes estén siempre a la vanguardia, capitalizando las últimas tendencias y tecnologías.</p>
+                        <p>
+                            Ofrecemos un espacio que no solo sirve como un lugar
+                            de trabajo, sino como un centro de aprendizaje y
+                            desarrollo profesional. A través de nuestro
+                            Instituto de Aprendizaje de TI y nuestros servicios
+                            de marketing digital, aseguramos que nuestros
+                            clientes estén siempre a la vanguardia,
+                            capitalizando las últimas tendencias y tecnologías.
+                        </p>
                     </div>
                     <ul>
-                        <li><i class="flaticon-correct"></i> Programación Personalizada</li>
-                        <li><i class="flaticon-correct"></i> Soluciones en WordPress</li>
-                        <li><i class="flaticon-correct"></i> Inducción Tecnológica</li>
-                        <li><i class="flaticon-correct"></i> Desarrollo Web con C# .NET y SQL Server</li>
-                        <li><i class="flaticon-correct"></i> Servicios de Alojamiento Web</li>
-                        <li><i class="flaticon-correct"></i> Creación de Páginas Web a Medida</li>
-                        <li><i class="flaticon-correct"></i> Gestión de Despliegues</li>
-                        <li><i class="flaticon-correct"></i> Seguridad Integrada</li>
+                        <li>
+                            <i class="flaticon-correct"></i> Programación
+                            Personalizada
+                        </li>
+                        <li>
+                            <i class="flaticon-correct"></i> Soluciones en
+                            WordPress
+                        </li>
+                        <li>
+                            <i class="flaticon-correct"></i> Inducción
+                            Tecnológica
+                        </li>
+                        <li>
+                            <i class="flaticon-correct"></i> Desarrollo Web con
+                            C# .NET y SQL Server
+                        </li>
+                        <li>
+                            <i class="flaticon-correct"></i> Servicios de
+                            Alojamiento Web
+                        </li>
+                        <li>
+                            <i class="flaticon-correct"></i> Creación de Páginas
+                            Web a Medida
+                        </li>
+                        <li>
+                            <i class="flaticon-correct"></i> Gestión de
+                            Despliegues
+                        </li>
+                        <li>
+                            <i class="flaticon-correct"></i> Seguridad Integrada
+                        </li>
                     </ul>
                     <a routerLink="/contacto" class="box-btn">Hablemos!</a>
                 </div>

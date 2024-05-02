@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialDataService } from '../../../../shared/social/social-data.service';
 
 @Component({
   selector: 'app-redes-horinzontal',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './redes-horinzontal.component.scss'
 })
 export class RedesHorinzontalComponent implements OnInit {
-  constructor() { }
+  constructor(public socialDataService: SocialDataService) {}
 
   ngOnInit(): void {
   }

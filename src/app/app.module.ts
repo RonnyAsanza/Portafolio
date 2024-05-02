@@ -51,6 +51,8 @@ import { ContactoComponent } from './components/shared/contacto/contacto.compone
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './components/shared/loader/loader.component';
+import { LoginComponent } from './components/landings/login/login.component';
+import { ShapeComponent } from './components/shared/shape/shape.component';
 
 @NgModule({
   declarations: [
@@ -78,33 +80,28 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     TermsConditionsComponent,
     PrivacyPolicyComponent,
     ContactComponent,
-
     RedesHorinzontalComponent,
-
     DesarrolloMobileComponent,
     DesarrolloWebComponent,
     PruebasDeCalidadComponent,
     GestionTiComponent,
     SeguridadCiberneticaComponent,
     ConectividadInalambricaComponent,
-
     DisenoComponent,
     DesarrolloComponent,
     SeguridadCiberneticaExitoComponent,
     AllComponent,
-
     JoeCompanyComponent,
     RideShareAppComponent,
     RestaurantManagementComponent,
     ItSoftwareCompanyComponent,
     ParkingManagementComponent,
     TemperatureAppComponent,
-  
     TestimoniosComponent,
-
     ContactoComponent,
-
-    LoaderComponent
+    LoaderComponent,
+    LoginComponent,
+    ShapeComponent,
 
   ],
   imports: [

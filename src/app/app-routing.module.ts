@@ -32,6 +32,7 @@ import { RideShareAppComponent } from './components/pages/case-studies-details/r
 import { RestaurantManagementComponent } from './components/pages/case-studies-details/restaurant-management/restaurant-management.component';
 import { ItSoftwareCompanyComponent } from './components/pages/case-studies-details/it-software-company/it-software-company.component';
 import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
+import { LoginComponent } from './components/landings/login/login.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -57,6 +58,8 @@ const routes: Routes = [
     { path: 'contacto', component: ContactComponent },
 
     { path: 'error', component: ErrorComponent },
+
+    { path: 'login', component: LoginComponent },
 
     // {path: 'case-studies', component: CaseStudiesComponent},
     // {path: 'case-studies-details', component: CaseStudiesDetailsComponent},

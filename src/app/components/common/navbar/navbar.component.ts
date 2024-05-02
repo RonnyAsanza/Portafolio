@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { SocialDataService } from '../../../shared/social/social-data.service';
 
 @Component({
     selector: 'app-navbar',
@@ -42,7 +43,8 @@ export class NavbarComponent implements OnInit {
 
     constructor(
         private router: Router,
-        location: Location
+        location: Location,
+        public socialDataService: SocialDataService
     ) {
         this.router.events
             .subscribe((event) => {

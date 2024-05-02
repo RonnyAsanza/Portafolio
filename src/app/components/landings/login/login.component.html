@@ -1,0 +1,154 @@
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Iniciar Sesión</h2>
+            <ul>
+                <li><a routerLink="/">Inicio </a></li>
+                <li class="active">Iniciar Sesión</li>
+            </ul>
+        </div>
+    </div>
+
+    <app-shape></app-shape>
+</div>
+
+<section class="signup-area ptb-100">
+    <div class="container">
+        <div class="signup-form">
+            <div class="section-tittle text-center">
+                <h2>Iniciar Sesión</h2>
+                <!-- <p>Con tu red social</p> -->
+            </div>
+
+            <form>
+                <div class="row">
+                    <!-- <div class="col-lg-4 col-md-4 col-sm-12" disabled>
+                        <a class="box-btn google" href="#" target="_blank"
+                            ><i class="bx bxl-google"></i> Google</a
+                        >
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <a class="box-btn facebook" href="#" target="_blank"
+                            ><i class="bx bxl-facebook"></i> Facebook</a
+                        >
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <a class="box-btn twitter" href="#" target="_blank"
+                            ><i class="bx bxl-twitter"></i> Twitter</a
+                        >
+                    </div> -->
+
+                    <!-- <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input
+                                class="form-control"
+                                type="text"
+                                name="name"
+                                placeholder="User Name"
+                            />
+                        </div>
+                    </div> -->
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <input
+                                class="form-control"
+                                type="email"
+                                name="email"
+                                [(ngModel)]="email"
+                                placeholder="Email"
+                            />
+                            <div *ngIf="emailIsValid === false" class="mb-2">
+                                <span class="text-danger">{{
+                                    emailErrorText
+                                }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input
+                                    class="form-control"
+                                    [type]="showPassword ? 'text' : 'password'"
+                                    name="password"
+                                    [(ngModel)]="password"
+                                    placeholder="Contraseña"
+                                />
+                            </div>
+                            <div class="input-group-append mt-2">
+                                <button
+                                    class="btn btn-outline-secondary"
+                                    type="button"
+                                    (click)="togglePasswordVisibility()"
+                                >
+                                    Ver contraseña
+                                </button>
+                            </div>
+                            <div *ngIf="passwordIsValid === false" class="mb-2">
+                                <span class="text-danger">{{
+                                    passwordErrorText
+                                }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 text-center mt-2">
+                        <div
+                            *ngIf="showAlertError"
+                            class="alert alert-danger"
+                            role="alert"
+                        >
+                            Email o Contraseña incorrectos
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="privecy-txt">
+                            <input
+                                type="checkbox"
+                                id="chb1"
+                                name="recoveryLogin"
+                                [ngModel]="recoveryLogin"
+                                (ngModelChange)="onChangeCheckbox($event)"
+                            />
+                            <label for="chb1">Recordar</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <button
+                            type="submit"
+                            class="box-btn signup-btn"
+                            (click)="iniciarSesion()"
+                        >
+                            Iniciar Sesión
+                        </button>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <p class="al-acc">
+                            ¿Haz olvidado la contraseña?
+                            <a routerLink="/recuperar-contraseña">
+                                Recuperar contraseña</a
+                            >
+                        </p>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <button
+                            type="submit"
+                            class="box-btn signup-btn green-btn"
+                            routerLink="/crear-cuenta"
+                        >
+                            Crear nueva cuenta
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
