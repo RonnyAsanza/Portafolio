@@ -57,10 +57,12 @@ const routes: Routes = [
 
     { path: 'terminos-condiciones', component: TermsConditionsComponent },
     { path: 'contacto', component: ContactComponent },
-
     { path: 'error', component: ErrorComponent },
 
     { path: 'login', component: LoginComponent },
+
+    // ADMIN
+    { path: 'email-message-table', component: EmailMessageTableAdminComponent },
 
     // {path: 'case-studies', component: CaseStudiesComponent},
     // {path: 'case-studies-details', component: CaseStudiesDetailsComponent},

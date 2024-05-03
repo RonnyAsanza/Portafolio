@@ -3,6 +3,7 @@ import { LoginService } from '../../../services/usuario/login.service';
 import { ServerResponse } from '../../../models/server-response';
 import { LoaderService } from '../../../services/interceptor/loader.service';
 import { StorageService } from '../../../services/storage/storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -26,9 +27,13 @@ export class LoginComponent {
   showAlertConfirm: boolean = false;
   showAlertError: boolean = false;
 
-  constructor(private loginService: LoginService, private loaderService: LoaderService, private storageService: StorageService) {
+  constructor(private loginService: LoginService, private loaderService: LoaderService, private storageService: StorageService, private router: Router) {
     this.getInLocalStoreRecovery();
     this.isLoged = this.storageService.get('loged');
+
+    if (this.isLoged) {
+      this.router.navigate(['/inicio']);
+    }
   }
 
   iniciarSesion() {
@@ -46,13 +51,15 @@ export class LoginComponent {
     }
 
     this.loginService.login({
-      email: this.email,
-      phone: this.password,
+      Email: this.email,
+      Password: this.password,
     }).subscribe({
       next: (response: ServerResponse) => {
         if (response.succeeded) {
           this.storageService.save('loged', true);
           this.storageService.save('userloged', response.data);
+          this.storageService.save('isAdmin', response.data.isAdmin);
+          this.router.navigate(['/inicio']);
           //redirect si es admin un sitio sino otro
           //setear true vistas
         } else {

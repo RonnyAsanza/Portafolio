@@ -343,13 +343,40 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <li *ngIf="!isLoged" class="nav-item">
                             <a
                                 (click)="toggleClass()"
                                 routerLink="/login"
                                 class="nav-link"
                                 >Iniciar Sesión
                             </a>
+                        </li>
+
+                        <li *ngIf="isLoged && isAdmin" class="nav-item">
+                            <a
+                                href="javascript:void(0)"
+                                class="nav-link dropdown-toggle"
+                                (click)="toggleDropdownTablas(false)"
+                                >Tablas</a
+                            >
+
+                            <ul
+                                class="dropdown-menu"
+                                *ngIf="isDropdownOpenTablas"
+                            >
+                                <li class="nav-item">
+                                    <a
+                                        routerLink="/email-message-table"
+                                        (click)="toggleDropdownTablas(true)"
+                                        class="nav-link"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{
+                                            exact: true
+                                        }"
+                                        >Email Message</a
+                                    >
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

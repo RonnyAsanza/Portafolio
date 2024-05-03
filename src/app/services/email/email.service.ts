@@ -6,8 +6,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class EmailService {
   //private apiUrl = 'https://localhost:7084/api/v1/Email/send-contact-email';
-  private apiUrl = 'https://asanzawebsolutions.azurewebsites.net/api/v1/Email/send-contact-email';
+  //private apiUrlGetEmailData = 'https://asanzawebsolutions.azurewebsites.net/api/v1/Email/';
 
+  private apiUrl = 'https://asanzawebsolutions.azurewebsites.net/api/v1/Email/send-contact-email';
+  private apiUrlGetEmailData = 'https://localhost:7084/api/v1/Email/';
+  
   constructor(private http: HttpClient) { }
 
   sendEmail(data: any) {
@@ -17,4 +20,13 @@ export class EmailService {
 
     return this.http.post(this.apiUrl, data, { headers: headers });
   }
+
+  getEmailData() {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer `
+    });
+
+    return this.http.get(this.apiUrlGetEmailData, { headers: headers });
+  }
+  
 }
