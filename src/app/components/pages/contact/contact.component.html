@@ -185,6 +185,26 @@
                                 </div>
                             </div>
 
+                            <div class="row text-center">
+                                <div class="col col-12">
+                                    <div
+                                        *ngIf="showAlertConfirm"
+                                        class="alert alert-success"
+                                        role="alert"
+                                    >
+                                        Enviado exitosamente!
+                                    </div>
+                                    <div
+                                        *ngIf="showAlertError"
+                                        class="alert alert-danger"
+                                        role="alert"
+                                    >
+                                        Hubo un error al enviar los datos,
+                                        contacta con nosotros por Whatsapp!
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="col-lg-12 col-md-12">
                                 <button
                                     type="submit"
@@ -195,26 +215,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-
-                <div class="row text-center">
-                    <div class="col col-12">
-                        <div
-                            *ngIf="showAlertConfirm"
-                            class="alert alert-success"
-                            role="alert"
-                        >
-                            Enviado exitosamente!
-                        </div>
-                        <div
-                            *ngIf="showAlertError"
-                            class="alert alert-danger"
-                            role="alert"
-                        >
-                            Hubo un error al enviar los datos, contacta con
-                            nosotros por Whatsapp!
-                        </div>
-                    </div>
                 </div>
             </div>
 
