@@ -32,7 +32,8 @@ export class LoginComponent {
     this.isLoged = this.storageService.get('loged');
 
     if (this.isLoged) {
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/inicio']).then(() => {
+      });
     }
   }
 
@@ -59,8 +60,8 @@ export class LoginComponent {
           this.storageService.save('loged', true);
           this.storageService.save('userloged', response.data);
           this.storageService.save('isAdmin', response.data.isAdmin);
-          this.router.navigate(['/inicio']);
-          //redirect si es admin un sitio sino otro
+          this.router.navigate(['/inicio']).then(() => {
+          });          //redirect si es admin un sitio sino otro
           //setear true vistas
         } else {
           this.showErrorLogin();

@@ -3,6 +3,7 @@ import { EmailMessageModel } from 'src/app/models/email/email-message';
 import { StorageService } from '../../../services/storage/storage.service';
 import { EmailService } from '../../../services/email/email.service';
 import { ServerResponse } from 'src/app/models/server-response';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-email-message-table-admin',
@@ -15,9 +16,14 @@ export class EmailMessageTableAdminComponent implements OnInit {
 
   datos: EmailMessageModel;
 
-  constructor(private storageService: StorageService, private emailService: EmailService) {
+  constructor(private storageService: StorageService, private emailService: EmailService, private router: Router) {
     this.isLoged = this.storageService.get('loged');
     this.isAdmin = this.storageService.get('isAdmin');
+
+    if (!this.isLoged || !this.isAdmin) {
+      this.router.navigate(['/inicio']).then(() => {
+      });
+    }
   }
 
   ngOnInit(): void {
