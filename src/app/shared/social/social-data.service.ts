@@ -8,10 +8,10 @@ export class SocialDataService {
   public urlFacebook: any = 'https://www.facebook.com/people/Asanza-Web-Solutions/61550212934317/';
   public urlEmail: any = 'mailto:asanzawebsolutions@gmail.com';
   public urlEmailPrivate: any = 'mailto:ronnyasanza@gmail.com';
-  public urlWhatsapp: any = 'https://wa.me/+34658230355';
-  public urlPhone: any = 'tel:+34658230355';
+  public urlWhatsapp: any = 'https://wa.me/+34645400608';
+  public urlPhone: any = 'tel:+34645400608';
 
   public email: any = 'asanzawebsolutions@gmail.com';
   public emailPrivate: any = 'ronnyasanza@gmail.com';
-  public phone: any = '+34 658 23 03 55';
+  public phone: any = '+34 645 40 06 09';
 }
