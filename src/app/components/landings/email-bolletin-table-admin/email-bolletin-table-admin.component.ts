@@ -9,16 +9,16 @@ import { ServerResponse } from 'src/app/models/server-response';
 import { MatSort } from '@angular/material/sort';
 
 @Component({
-  selector: 'app-email-message-table-admin',
-  templateUrl: './email-message-table-admin.component.html',
-  styleUrls: ['./email-message-table-admin.component.scss', './../../../indigo-pink.scss'],
+  selector: 'app-email-bolletin-table-admin',
+  templateUrl: './email-bolletin-table-admin.component.html',
+  styleUrls: ['./email-bolletin-table-admin.component.scss', './../../../indigo-pink.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class EmailMessageTableAdminComponent implements OnInit, AfterViewInit {
+export class EmailBolletinTableAdminComponent implements OnInit, AfterViewInit {
   isLogged: boolean;
   isAdmin: boolean;
   datos = new MatTableDataSource<EmailMessageModel>();
-  displayedColumns: string[] = ['id', 'name', 'phone', 'email', 'subject', 'message', 'date', 'actions'];
+  displayedColumns: string[] = ['id', 'email', 'date', 'actions'];
   pageSize = 10;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -46,7 +46,7 @@ export class EmailMessageTableAdminComponent implements OnInit, AfterViewInit {
   }
 
   loadEmailData() {
-    this.emailService.getEmailData().subscribe({
+    this.emailService.getEmailBulletin().subscribe({
       next: (response: ServerResponse) => {
         if (response.succeeded && Array.isArray(response.data)) {
           this.datos.data = Array.isArray(response.data) ? response.data : [];

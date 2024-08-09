@@ -19,6 +19,11 @@ export class EmailService {
     return this.http.get(this.apiUrl);
   }
 
+  getEmailBulletin() {
+    let url = this.apiUrl + "get-email-bolletin" 
+    return this.http.get(url);
+  }
+
   sendEmailBulletin(data: any) {
     let url = this.apiUrl + "send-email-bolletin" 
     return this.http.post(url, data);

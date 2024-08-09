@@ -34,6 +34,7 @@ import { ItSoftwareCompanyComponent } from './components/pages/case-studies-deta
 import { ParkingManagementComponent } from './components/pages/case-studies-details/parking-management/parking-management.component';
 import { LoginComponent } from './components/landings/login/login.component';
 import { EmailMessageTableAdminComponent } from './components/landings/email-message-table-admin/email-message-table-admin.component';
+import { EmailBolletinTableAdminComponent } from './components/landings/email-bolletin-table-admin/email-bolletin-table-admin.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -63,6 +64,7 @@ const routes: Routes = [
 
     // ADMIN
     { path: 'email-message-table', component: EmailMessageTableAdminComponent },
+    { path: 'email-bolletin-table', component: EmailBolletinTableAdminComponent },
 
     // {path: 'case-studies', component: CaseStudiesComponent},
     // {path: 'case-studies-details', component: CaseStudiesDetailsComponent},

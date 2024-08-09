@@ -54,6 +54,7 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
 import { LoginComponent } from './components/landings/login/login.component';
 import { ShapeComponent } from './components/shared/shape/shape.component';
 import { EmailMessageTableAdminComponent } from './components/landings/email-message-table-admin/email-message-table-admin.component';
+import { EmailBolletinTableAdminComponent } from './components/landings/email-bolletin-table-admin/email-bolletin-table-admin.component';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpConfigInterceptor } from '../app/services/interceptor/httpconfig.interceptor';
@@ -115,8 +116,8 @@ import { MatSortModule } from '@angular/material/sort';
     LoaderComponent,
     LoginComponent,
     ShapeComponent,
-    EmailMessageTableAdminComponent
-
+    EmailMessageTableAdminComponent,
+    EmailBolletinTableAdminComponent
   ],
   imports: [
     BrowserModule,
