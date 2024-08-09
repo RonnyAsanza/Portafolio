@@ -5,9 +5,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EmailService {
-  
-  private apiUrl = 'https://localhost:7185/api/Email/';
-  //private apiUrl = 'https://l6opn7urig732v6vph2cpal36e0dpsnb.lambda-url.us-east-1.on.aws/api/Email/';
+
+  //private apiUrl = 'https://localhost:7185/api/Email/';
+  private apiUrl = 'https://l6opn7urig732v6vph2cpal36e0dpsnb.lambda-url.us-east-1.on.aws/api/Email/';
 
   constructor(private http: HttpClient) { }
 
@@ -20,13 +20,13 @@ export class EmailService {
   }
 
   getEmailBulletin() {
-    let url = this.apiUrl + "get-email-bolletin" 
+    let url = this.apiUrl + "get-email-bolletin"
     return this.http.get(url);
   }
 
   sendEmailBulletin(data: any) {
-    let url = this.apiUrl + "send-email-bolletin" 
+    let url = this.apiUrl + "send-email-bolletin"
     return this.http.post(url, data);
   }
-  
+
 }
