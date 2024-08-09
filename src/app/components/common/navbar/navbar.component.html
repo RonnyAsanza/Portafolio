@@ -343,7 +343,7 @@
                             </a>
                         </li>
 
-                        <!-- <li *ngIf="!isLoged" class="nav-item">
+                        <!-- <li *ngIf="!isLogged" class="nav-item">
                             <a
                                 (click)="toggleClass()"
                                 routerLink="/login"
@@ -352,7 +352,7 @@
                             </a>
                         </li> -->
 
-                        <li *ngIf="isLoged && isAdmin" class="nav-item">
+                        <li *ngIf="isLogged && isAdmin" class="nav-item">
                             <a
                                 href="javascript:void(0)"
                                 class="nav-link dropdown-toggle"
@@ -374,6 +374,19 @@
                                             exact: true
                                         }"
                                         >Email Message</a
+                                    >
+                                </li>
+
+                                <li class="nav-item">
+                                    <a
+                                        routerLink="/email-bolletin-table"
+                                        (click)="toggleDropdownTablas(true)"
+                                        class="nav-link"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{
+                                            exact: true
+                                        }"
+                                        >Email Bolletin</a
                                     >
                                 </li>
                             </ul>

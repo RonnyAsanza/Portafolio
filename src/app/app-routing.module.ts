@@ -79,7 +79,7 @@ const routes: Routes = [
     // {path: 'home-two', component: HomeTwoComponent},
     // {path: 'home-three', component: HomeThreeComponent},
 
-    { path: '**', component: EmailMessageTableAdminComponent}
+    { path: '**', component: HomeOneComponent }
 
 ];
 

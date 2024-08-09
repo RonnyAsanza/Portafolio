@@ -16,7 +16,7 @@ import { StorageService } from '../../../services/storage/storage.service';
     ]
 })
 export class NavbarComponent implements OnInit {
-    isLoged: boolean = false;
+    isLogged: boolean = false;
     isAdmin: boolean = true;
     location: any;
     navbarClass: any;
@@ -68,7 +68,7 @@ export class NavbarComponent implements OnInit {
                     }
                 }
             });
-        this.isLoged = this.storageService.get('loged');
+        this.isLogged = this.storageService.get('logged');
     }
 
     ngOnInit(): void { }

@@ -58,6 +58,15 @@ import { EmailMessageTableAdminComponent } from './components/landings/email-mes
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpConfigInterceptor } from '../app/services/interceptor/httpconfig.interceptor';
 
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSortModule } from '@angular/material/sort';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -116,14 +125,22 @@ import { HttpConfigInterceptor } from '../app/services/interceptor/httpconfig.in
     BrowserAnimationsModule,
     NgxScrollTopModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule,
+    MatTableModule,
+    BrowserModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSortModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpConfigInterceptor,
       multi: true
-    }
+    },
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

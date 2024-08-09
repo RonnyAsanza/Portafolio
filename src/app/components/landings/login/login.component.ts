@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  isLoged: boolean = false;
+  isLogged: boolean = false;
 
   email: string = '';
   password: string = '';
@@ -28,9 +28,9 @@ export class LoginComponent {
 
   constructor(private loginService: LoginService, private storageService: StorageService, private router: Router) {
     this.getInLocalStoreRecovery();
-    this.isLoged = this.storageService.get('loged');
+    this.isLogged = this.storageService.get('logged');
 
-    if (this.isLoged) {
+    if (this.isLogged) {
       this.router.navigate(['/inicio']).then(() => {
       });
     }
@@ -55,8 +55,8 @@ export class LoginComponent {
     }).subscribe({
       next: (response: ServerResponse) => {
         if (response.succeeded) {
-          this.storageService.save('loged', true);
-          this.storageService.save('userloged', response.data);
+          this.storageService.save('logged', true);
+          this.storageService.save('userlogged', response.data);
           this.storageService.save('isAdmin', response.data.isAdmin);
           this.router.navigate(['/inicio']).then(() => {
           });          //redirect si es admin un sitio sino otro
