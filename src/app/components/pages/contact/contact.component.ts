@@ -9,7 +9,6 @@ import { SocialDataService } from '../../../shared/social/social-data.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  isLoading: boolean = false;
   showAlertConfirm: boolean = false;
   showAlertError: boolean = false;
 
@@ -40,8 +39,6 @@ export class ContactComponent {
       return;
     }
 
-    this.isLoading = true;
-
     this.emailService.sendEmail({
       names: this.name,
       email: this.email,
@@ -59,10 +56,8 @@ export class ContactComponent {
       },
       error: (error) => {
         this.showErrorSendEmail();
-        this.isLoading = false;
       },
       complete: () => {
-        this.isLoading = false;
       }
     });
   }
@@ -107,11 +102,11 @@ export class ContactComponent {
 
   showErrorSendEmail() {
     this.showAlertError = true;
-    setTimeout(() => this.showAlertError = false, 5000);
+    setTimeout(() => this.showAlertError = false, 10000);
   }
   showConfirmSendEmail() {
     this.showAlertConfirm = true;
-    setTimeout(() => this.showAlertConfirm = false, 5000);
+    setTimeout(() => this.showAlertConfirm = false, 10000);
   }
 
   resetForm() {

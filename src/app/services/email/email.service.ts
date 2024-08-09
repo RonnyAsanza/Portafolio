@@ -5,28 +5,21 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EmailService {
-  //private apiUrl = 'https://localhost:7084/api/v1/Email/send-contact-email';
-  //private apiUrlGetEmailData = 'https://localhost:7084/api/v1/Email/';
-
-  private apiUrl = 'https://asanzawebsolutions.azurewebsites.net/api/v1/Email/send-contact-email';
-  private apiUrlGetEmailData = 'https://asanzawebsolutions.azurewebsites.net/api/v1/Email/';
-
+  private apiUrl = 'https://localhost:7185/api/Email/';
+  //private apiUrl = 'https://l6opn7urig732v6vph2cpal36e0dpsnb.lambda-url.us-east-1.on.aws/api/Email/';
   constructor(private http: HttpClient) { }
 
   sendEmail(data: any) {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-    });
-
-    return this.http.post(this.apiUrl, data, { headers: headers });
+    return this.http.post(this.apiUrl, data);
   }
 
   getEmailData() {
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer `
-    });
+    return this.http.get(this.apiUrl);
+  }
 
-    return this.http.get(this.apiUrlGetEmailData, { headers: headers });
+  sendEmailBulletin(data: any) {
+    let url = this.apiUrl + "send-email-bolletin" 
+    return this.http.post(url, data);
   }
   
 }

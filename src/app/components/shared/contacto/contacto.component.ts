@@ -10,7 +10,6 @@ import { ServerResponse } from '../../../models/server-response';
 export class ContactoComponent {
   @Input() imageName: string; // Nombre del archivo de imagen
 
-  isLoading: boolean = false;
   showAlertConfirm: boolean = false;
   showAlertError: boolean = false;
 
@@ -42,8 +41,6 @@ export class ContactoComponent {
       return;
     }
 
-    this.isLoading = true;
-
     this.emailService.sendEmail({
       names: this.name,
       email: this.email,
@@ -61,10 +58,8 @@ export class ContactoComponent {
       },
       error: (error) => {
         this.showErrorSendEmail();
-        this.isLoading = false;
       },
       complete: () => {
-        this.isLoading = false;
       }
     });
   }
@@ -109,11 +104,11 @@ export class ContactoComponent {
 
   showErrorSendEmail() {
     this.showAlertError = true;
-    setTimeout(() => this.showAlertError = false, 5000);
+    setTimeout(() => this.showAlertError = false, 10000);
   }
   showConfirmSendEmail() {
     this.showAlertConfirm = true;
-    setTimeout(() => this.showAlertConfirm = false, 5000);
+    setTimeout(() => this.showAlertConfirm = false, 10000);
   }
 
   resetForm() {

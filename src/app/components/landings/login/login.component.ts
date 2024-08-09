@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../../../services/usuario/login.service';
 import { ServerResponse } from '../../../models/server-response';
-import { LoaderService } from '../../../services/interceptor/loader.service';
 import { StorageService } from '../../../services/storage/storage.service';
 import { Router } from '@angular/router';
 
@@ -27,7 +26,7 @@ export class LoginComponent {
   showAlertConfirm: boolean = false;
   showAlertError: boolean = false;
 
-  constructor(private loginService: LoginService, private loaderService: LoaderService, private storageService: StorageService, private router: Router) {
+  constructor(private loginService: LoginService, private storageService: StorageService, private router: Router) {
     this.getInLocalStoreRecovery();
     this.isLoged = this.storageService.get('loged');
 
@@ -43,7 +42,6 @@ export class LoginComponent {
       return;
     }
 
-    this.loaderService.show();
     if (this.recoveryLogin === true) {
       this.saveInLocalStoreRecovery();
     }
@@ -68,11 +66,8 @@ export class LoginComponent {
         }
       },
       error: (error) => {
-        this.showErrorLogin();
-        this.loaderService.hide();
       },
       complete: () => {
-        this.loaderService.hide();
       }
     });
   }
@@ -99,7 +94,7 @@ export class LoginComponent {
 
   showErrorLogin() {
     this.showAlertError = true;
-    setTimeout(() => this.showAlertError = false, 7000);
+    setTimeout(() => this.showAlertError = false, 10000);
   }
 
   resetForm() {

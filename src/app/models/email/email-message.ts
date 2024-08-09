@@ -7,3 +7,7 @@ export interface EmailMessageModel {
     message: string;
     data: string;
 }
+
+export interface SendEmailBolletinModel {
+    email: string;
+}
